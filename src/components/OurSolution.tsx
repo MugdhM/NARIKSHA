@@ -39,48 +39,35 @@ const OurSolution = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
-            const isEven = index % 2 === 0;
-            
             return (
-              <div key={index} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
-                <div className="lg:w-1/2">
-                  <div className="relative rounded-2xl overflow-hidden shadow-pastel">
-                    <img 
-                      src={step.image} 
-                      alt={step.title}
-                      className="w-full h-96 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                  </div>
+              <div
+                key={index}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-pastel hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                {/* Image Container */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
-                
-                <div className="lg:w-1/2 space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${step.gradient} rounded-full flex items-center justify-center shadow-soft`}>
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-4xl font-bold bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum bg-clip-text text-transparent font-sans">
-                      0{index + 1}
-                    </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br ${step.gradient} shadow-soft mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  
-                  <h3 className="text-3xl font-bold text-gray-900 font-sans">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 font-sans">
                     {step.title}
                   </h3>
-                  
-                  <p className="text-lg text-gray-700 leading-relaxed font-sans">
+                  <p className="text-gray-700 leading-relaxed font-sans">
                     {step.description}
                   </p>
-                  
-                  {index < steps.length - 1 && (
-                    <div className="flex items-center text-pastel-rose font-medium font-sans">
-                      <span>Next Step</span>
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </div>
-                  )}
                 </div>
               </div>
             );
@@ -88,10 +75,10 @@ const OurSolution = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-20 text-center">
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-rose transition-all duration-300 cursor-pointer font-sans font-semibold text-lg">
+        <div className="mt-16 text-center">
+          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-lg group">
             Learn More About Our Process
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </div>
