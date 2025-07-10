@@ -28,11 +28,26 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16 py-2 sm:py-0">
           <div className="flex items-center space-x-2">
-            <div className="w-7 h-7 md:w-8 md:h-8 bg-gradient-to-br from-pastel-rose via-pastel-orchid to-pastel-plum rounded-full flex items-center justify-center shadow-soft">
-              <Leaf className="w-4 h-4 md:w-5 md:h-5 text-white" />
-            </div>
-            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum bg-clip-text text-transparent font-sans">Nariksha</span>
-          </div>
+  <div className="w-7 h-7 md:w-8 md:h-8 bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-full flex items-center justify-center shadow-soft">
+    {/* Replace Leaf icon with a shield (for safety) and female symbol */}
+    <svg
+      className="w-4 h-4 md:w-5 md:h-5 text-white"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      {/* Shield shape */}
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3l7 4v5c0 5.25-3.5 9.74-7 11-3.5-1.26-7-5.75-7-11V7l7-4z" />
+      {/* Female symbol */}
+      <circle cx="12" cy="13" r="2" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+      <line x1="12" y1="15" x2="12" y2="18" stroke="currentColor" strokeWidth="1.5"/>
+      <line x1="10.5" y1="18" x2="13.5" y2="18" stroke="currentColor" strokeWidth="1.5"/>
+    </svg>
+  </div>
+  <span className="text-lg md:text-xl font-extrabold font-mono tracking-tight bg-gradient-to-r from-green-500 via-green-600 to-green-700 bg-clip-text text-transparent">
+    Nariksha Pads
+  </span>
+</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">

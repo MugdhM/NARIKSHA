@@ -8,28 +8,28 @@ const WhyNariksha = () => {
       title: '100% Biodegradable',
       description: 'Completely decomposes within 6 months, leaving zero environmental footprint',
       gradient: 'from-pastel-rose via-pastel-orchid to-pastel-plum',
-      image: '/images/biodegradable.jpg'
+      image: '/images/biodegradable.webp'
     },
     {
       icon: Heart,
       title: 'Skin-Safe & Organic',
       description: 'Made from natural materials with no harmful chemicals or synthetic additives',
       gradient: 'from-pastel-rose via-pastel-orchid to-pastel-plum',
-      image: '/images/organic.jpg'
+      image: '/images/organic.webp'
     },
     {
       icon: Users,
       title: 'Empowers Communities',
       description: 'Creates sustainable livelihoods for rural women and supports local farmers',
       gradient: 'from-pastel-rose via-pastel-orchid to-pastel-plum',
-      image: '/images/community.jpg'
+      image: '/images/community-support.png'
     },
     {
       icon: Recycle,
       title: 'Waste Innovation',
       description: 'Transforms agricultural waste into valuable products, reducing crop burning',
       gradient: 'from-pastel-rose via-pastel-orchid to-pastel-plum',
-      image: '/images/innovation.jpg'
+      image: '/images/waste-innovation.jpg'
     }
   ];
 

@@ -76,7 +76,7 @@ const Hero = () => {
             <div className="relative lg:h-[500px] w-full max-w-md mx-auto lg:mx-0">
               <div className="relative h-full rounded-2xl overflow-hidden shadow-pastel">
                 <img 
-                  src="/images/hero-product.jpg" 
+                  src="/images/retail-shop-owner-mask-social-distancing-shopping.jpg" 
                   alt="Eco-friendly sanitary products" 
                   className="w-full h-full object-cover"
                 />
