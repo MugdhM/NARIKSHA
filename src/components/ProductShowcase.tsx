@@ -129,7 +129,7 @@ const ProductShowcase = () => {
             return (
               <div 
                 key={index} 
-                className="bg-pastel-mist rounded-2xl md:rounded-3xl overflow-hidden hover:shadow-pastel transition-shadow duration-300 cursor-pointer"
+                className="bg-pastel-mist rounded-2xl md:rounded-3xl overflow-hidden hover:shadow-pastel transition-shadow duration-300 cursor-pointer mb-8 md:mb-0"
                 onClick={() => setSelectedProduct(product)}
               >
                 <div className="relative">
@@ -166,12 +166,12 @@ const ProductShowcase = () => {
                     ))}
                   </ul>
                   
-                  <div className="flex items-center justify-between text-xs md:text-sm text-gray-600 mb-4">
+                  <div className="flex flex-col sm:flex-row items-center justify-between text-xs md:text-sm text-gray-600 mb-4 gap-2">
                     <span>Min. Order: {product.minOrder}</span>
                     <span>Lead Time: {product.leadTime}</span>
                   </div>
 
-                  <button className={`w-full py-2.5 md:py-3 bg-gradient-to-r ${product.gradient} text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-sm md:text-base flex items-center justify-center`}>
+                  <button className={`w-full sm:w-auto py-2.5 md:py-3 bg-gradient-to-r ${product.gradient} text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-sm md:text-base flex items-center justify-center mt-2`}>
                     Request Quote
                     <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                   </button>
@@ -183,7 +183,7 @@ const ProductShowcase = () => {
 
         {/* Product Specifications */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
-          <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-soft">
+          <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-soft mb-8 lg:mb-0">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-sans mb-6">
               Product Specifications
             </h3>

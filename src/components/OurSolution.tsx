@@ -45,7 +45,7 @@ const OurSolution = () => {
             return (
               <div
                 key={index}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-pastel hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-pastel hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 mb-8 md:mb-0"
               >
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
@@ -75,8 +75,8 @@ const OurSolution = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-lg group">
+        <div className="mt-16 text-center px-4">
+          <button className="w-full sm:w-auto inline-flex items-center px-8 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-lg group">
             Learn More About Our Process
             <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
           </button>

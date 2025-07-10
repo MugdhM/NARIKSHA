@@ -48,7 +48,7 @@ const Comparison = () => {
         <div className="bg-white rounded-2xl shadow-pastel overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum p-6 text-white">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <h3 className="text-xl font-bold font-sans">Our Unique Features</h3>
               <Star className="w-6 h-6 text-yellow-300 fill-current" />
             </div>
@@ -57,7 +57,7 @@ const Comparison = () => {
           {/* Feature Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
             {features.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="p-6">
+              <div key={categoryIndex} className="p-6 space-y-4 text-center md:text-left">
                 <h4 className="text-lg font-semibold text-gray-800 font-sans mb-4">
                   {category.category}
                 </h4>
@@ -84,8 +84,8 @@ const Comparison = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <button className="px-6 py-3 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-base">
+        <div className="mt-12 text-center px-4">
+          <button className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-base">
             Request Bulk Quote
           </button>
         </div>

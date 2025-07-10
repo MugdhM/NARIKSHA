@@ -70,7 +70,7 @@ const PartnerInquiry = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-pastel">
+          <div className="bg-white rounded-3xl p-8 shadow-pastel mb-8 lg:mb-0">
             <h3 className="text-2xl font-bold text-gray-900 font-sans mb-6">
               Partnership Inquiry
             </h3>
@@ -87,7 +87,7 @@ const PartnerInquiry = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans mb-4"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -102,7 +102,7 @@ const PartnerInquiry = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans mb-4"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -118,7 +118,7 @@ const PartnerInquiry = () => {
                   value={formData.organization}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans mb-4"
                   placeholder="Enter organization name"
                 />
               </div>
@@ -133,7 +133,7 @@ const PartnerInquiry = () => {
                     value={formData.partnerType}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans mb-4"
                   >
                     <option value="">Select type</option>
                     {partnerTypes.map((type) => (
@@ -150,7 +150,7 @@ const PartnerInquiry = () => {
                     name="volume"
                     value={formData.volume}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans mb-4"
                   >
                     <option value="">Select volume</option>
                     <option value="100-500">100-500 units</option>
@@ -170,14 +170,14 @@ const PartnerInquiry = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-orchid focus:border-transparent transition-colors font-sans mb-4"
                   placeholder="Tell us about your project and requirements..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center space-x-2 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-lg hover:shadow-pastel transition-all duration-300 font-semibold text-lg font-sans"
+                className="w-full flex items-center justify-center space-x-2 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-lg hover:shadow-pastel transition-all duration-300 font-semibold text-lg font-sans mt-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Partnership Request</span>
@@ -186,8 +186,8 @@ const PartnerInquiry = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-3xl p-8 shadow-pastel">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="bg-white rounded-3xl p-8 shadow-pastel mb-8 lg:mb-0">
               <h3 className="text-2xl font-bold text-gray-900 font-sans mb-6">
                 Get in Touch
               </h3>
@@ -196,13 +196,13 @@ const PartnerInquiry = () => {
                 {contactInfo.map((contact, index) => {
                   const IconComponent = contact.icon;
                   return (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${contact.gradient} rounded-full flex items-center justify-center shadow-soft`}>
+                    <div key={index} className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                      <div className={`w-12 h-12 bg-gradient-to-br ${contact.gradient} rounded-full flex items-center justify-center shadow-soft mb-2 sm:mb-0`}>
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-gray-500 font-sans">{contact.label}</div>
-                        <div className="text-gray-900 font-sans">{contact.value}</div>
+                        <div className="font-semibold text-gray-900 font-sans">{contact.label}</div>
+                        <div className="text-gray-700 font-sans">{contact.value}</div>
                       </div>
                     </div>
                   );

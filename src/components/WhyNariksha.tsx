@@ -46,13 +46,13 @@ const WhyNariksha = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl bg-pastel-mist hover:bg-white hover:shadow-pastel transition-all duration-300 transform hover:-translate-y-2"
+                className="group relative overflow-hidden rounded-2xl bg-pastel-mist hover:bg-white hover:shadow-pastel transition-all duration-300 transform hover:-translate-y-2 mb-8 md:mb-0"
               >
                 {/* Feature Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -82,7 +82,7 @@ const WhyNariksha = () => {
         </div>
 
         {/* Additional Stats Section */}
-        <div className="mt-20 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum rounded-3xl p-8 md:p-12 text-white shadow-pastel relative overflow-hidden">
+        <div className="mt-20 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum rounded-3xl p-8 md:p-12 text-white shadow-pastel relative overflow-hidden text-center">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <img 

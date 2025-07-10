@@ -13,11 +13,11 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-[80vh] bg-gradient-to-br from-pastel-mist via-white to-pastel-rose/20 pt-20">
+    <section className="relative min-h-[80vh] bg-gradient-to-br from-pastel-mist via-white to-pastel-rose/20 pt-20 pb-8 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           {/* Main Content */}
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center space-y-8 lg:space-y-0">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
               {/* Badge */}
@@ -41,7 +41,7 @@ const Hero = () => {
               </p>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12 w-full">
                 <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum text-white rounded-full hover:shadow-pastel transition-all duration-300 font-sans font-semibold text-lg">
                   Request Bulk Quote
                 </button>
@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
 
             {/* Right Column - Hero Image */}
-            <div className="relative lg:h-[500px]">
+            <div className="relative lg:h-[500px] w-full max-w-md mx-auto lg:mx-0">
               <div className="relative h-full rounded-2xl overflow-hidden shadow-pastel">
                 <img 
                   src="/images/hero-product.jpg" 
@@ -86,11 +86,11 @@ const Hero = () => {
           </div>
 
           {/* Partners Section with Carousel */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-12 pt-8 border-t border-gray-200 overflow-x-auto">
             <p className="text-sm text-gray-600 mb-6 font-sans text-center">Trusted by leading organizations</p>
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-x-auto">
               <div 
-                className="flex"
+                className="flex min-w-max"
                 style={{
                   animation: 'carousel 30s linear infinite',
                 }}

@@ -60,15 +60,15 @@ const Impact = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-col sm:flex-row justify-center mb-12">
-          <div className="flex bg-pastel-mist rounded-full p-1 shadow-soft">
+        <div className="flex flex-col sm:flex-row justify-center mb-12 gap-4">
+          <div className="flex bg-pastel-mist rounded-full p-1 shadow-soft flex-wrap gap-2 justify-center">
             {tabs.map((tab) => {
               const TabIcon = tab.icon;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 font-sans ${
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 font-sans mb-2 sm:mb-0 ${
                     activeTab === tab.id
                       ? `bg-gradient-to-r ${tab.gradient} text-white shadow-soft`
                       : 'text-gray-600 hover:text-gray-900'
@@ -98,14 +98,14 @@ const Impact = () => {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8 font-sans">
                   {currentTab.description}
                 </p>
-                <button className={`px-6 py-3 bg-gradient-to-r ${currentTab.gradient} text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-medium`}>
+                <button className={`w-full sm:w-auto px-6 py-3 bg-gradient-to-r ${currentTab.gradient} text-white rounded-full hover:shadow-soft transition-all duration-300 font-sans font-medium`}>
                   Learn More
                 </button>
               </div>
 
               <div className="grid grid-cols-1 gap-6">
                 {currentTab.stats.map((stat, index) => (
-                  <div key={index} className="bg-pastel-mist rounded-xl p-6 hover:shadow-soft transition-shadow duration-300">
+                  <div key={index} className="bg-pastel-mist rounded-xl p-6 hover:shadow-soft transition-shadow duration-300 text-center">
                     <div className={`text-4xl font-bold bg-gradient-to-r ${currentTab.gradient} bg-clip-text text-transparent font-sans mb-2`}>
                       {stat.number}
                     </div>
@@ -123,7 +123,7 @@ const Impact = () => {
         )}
 
         {/* Overall Impact Summary */}
-        <div className="bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum rounded-3xl p-8 md:p-12 text-white text-center shadow-pastel">
+        <div className="bg-gradient-to-r from-pastel-rose via-pastel-orchid to-pastel-plum rounded-3xl p-8 md:p-12 text-white text-center shadow-pastel mt-8">
           <h3 className="text-3xl md:text-4xl font-bold font-sans mb-4">
             Together, We're Building a Sustainable Future
           </h3>
@@ -131,7 +131,7 @@ const Impact = () => {
             Join us in creating positive change that extends far beyond menstrual hygiene - 
             impacting communities, environment, and livelihoods across India
           </p>
-          <button className="px-8 py-4 bg-white text-gray-900 rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-lg">
+          <button className="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 rounded-full hover:shadow-soft transition-all duration-300 font-sans font-semibold text-lg">
             Become a Partner
           </button>
         </div>

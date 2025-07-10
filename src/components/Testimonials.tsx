@@ -64,9 +64,9 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-3xl p-8 shadow-pastel hover:shadow-rose transition-shadow duration-300">
+            <div key={index} className="bg-white rounded-3xl p-8 shadow-pastel hover:shadow-rose transition-shadow duration-300 mb-8 md:mb-0">
               {/* Quote Icon */}
               <div className="w-12 h-12 bg-gradient-to-br from-pastel-rose via-pastel-orchid to-pastel-plum rounded-full flex items-center justify-center mb-6 shadow-soft">
                 <Quote className="w-6 h-6 text-white" />
@@ -108,21 +108,21 @@ const Testimonials = () => {
         </div>
 
         {/* Partner Logos Section */}
-        <div className="mt-20 text-center">
+        <div className="mt-20 text-center px-4">
           <h3 className="text-2xl font-bold text-gray-900 font-sans mb-8">
             Proud Partners Include
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft">
+            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft mb-4">
               <span className="text-gray-700 font-semibold font-sans">NGO Partner</span>
             </div>
-            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft">
+            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft mb-4">
               <span className="text-gray-700 font-semibold font-sans">Govt Body</span>
             </div>
-            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft">
+            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft mb-4">
               <span className="text-gray-700 font-semibold font-sans">Corporate</span>
             </div>
-            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft">
+            <div className="bg-white/50 h-16 w-32 rounded-lg flex items-center justify-center shadow-soft mb-4">
               <span className="text-gray-700 font-semibold font-sans">Foundation</span>
             </div>
           </div>
