@@ -86,44 +86,7 @@ const Hero = () => {
           </div>
 
           {/* Partners Section with Carousel */}
-          <div className="mt-12 pt-8 border-t border-gray-200 overflow-x-auto">
-            <p className="text-sm text-gray-600 mb-6 font-sans text-center">Trusted by leading organizations</p>
-            <div className="relative overflow-x-auto">
-              <div 
-                className="flex min-w-max"
-                style={{
-                  animation: 'carousel 30s linear infinite',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.animationPlayState = 'paused';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.animationPlayState = 'running';
-                }}
-              >
-                {/* First set of logos */}
-                {partnerLogos.map((logo) => (
-                  <div key={logo.id} className="flex-shrink-0 px-8">
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt} 
-                      className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                ))}
-                {/* Duplicate set for seamless loop */}
-                {partnerLogos.map((logo) => (
-                  <div key={`duplicate-${logo.id}`} className="flex-shrink-0 px-8">
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt} 
-                      className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* Removed 'Trusted by leading organizations' and partner logos carousel */}
         </div>
       </div>
 

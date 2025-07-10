@@ -40,13 +40,7 @@ const Testimonials = () => {
     <section className="py-20 bg-soft-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-sans mb-4">
-            Trusted by Leading Organizations
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto font-sans">
-            From NGOs to government bodies, our partners trust Nariksha to deliver 
-            quality products that create meaningful social and environmental impact
-          </p>
+          {/* Removed 'Awarded By' heading and description */}
         </div>
 
         {/* Partner Metrics */}

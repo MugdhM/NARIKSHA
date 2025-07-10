@@ -7,7 +7,7 @@ import Impact from './components/Impact';
 import Comparison from './components/Comparison';
 import Testimonials from './components/Testimonials';
 import ProductShowcase from './components/ProductShowcase';
-import PartnerInquiry from './components/PartnerInquiry';
+import AwardedSection from './components/AwardedSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <Comparison />
       <Testimonials />
       <ProductShowcase />
-      <PartnerInquiry />
+      <AwardedSection />
       <Footer />
     </div>
   );
